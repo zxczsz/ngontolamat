@@ -7,14 +7,9 @@ from pyrogram.types import (
 from sessionMaker import sessionCli
 
 START_MESSAGE = (
-        'Hai!\n'
-        'I can generate Session String **Pyrogram & Telethon** for your UserBot.\n\n'
-    
-        '**This requires :**\n- **API ID**\n- **API HASH**\n- **PHONE NUMBER**\n- **VERIFICATION**\n\nI suggest you to prepare the required items before using this Bot'
-    
-        '**Note** : I do not collect or log your login credentials/sessions.\n'
-        'Bot By : @hilmay619\n\n'
-        '**Now, choose the one you need**'
+        '**I can generate Session String Pyrogram & Telethon for your UserBot.**  ✨.\n\n'
+        '**Note :-** 🔰\n\n'
+        '🚫 **I never collect your login credentials/sessions !**  🚫'
     )
 
 KEYBOARD = InlineKeyboardMarkup(
