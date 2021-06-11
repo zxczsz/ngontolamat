@@ -1,6 +1,7 @@
 # pyrogram Implimantation
 pyrogram 
 tgcrypto
+heroku3
  
 # Telethon Implmantioon 
 telethon
