@@ -54,7 +54,7 @@ async def pyroGen(sessionCli, callback_data):
     PHONE = await sessionCli.ask(
         chat_id=user_id,
         text=(
-            '**SEND ME YOUR PHONE_NUMBER** IN INTERNATIONAL FORMAT. EXAMPLE : +6285210097400'
+            '**SEND ME YOUR PHONE NUMBER**\n**IN INTERNATIONAL FORMAT  : +1 / +62 / +62852x**'
         )
     )    
     if str(PHONE.text).startswith('+'):
@@ -95,7 +95,7 @@ async def pyroGen(sessionCli, callback_data):
         ASK_CODE = await sessionCli.ask(
             chat_id=user_id,
             text=(
-                '**SEND ME YOUR VERIFICATION CODE. FORMAT :** `1-2-3-4-5` **NOT** `12345`'
+                '**SEND ME YOUR VERIFICATION CODE.**\n\n**FORMAT : 1-2-3-4-5** ✅ \n**FORMAT : 12345** 🚫\n**FORMAT : 12345** 🚫'
             )
         )
 
@@ -146,7 +146,7 @@ async def pyroGen(sessionCli, callback_data):
         await sessionCli.send_message(
             chat_id=user_id,
             text=(
-                f'**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — PYROGRAM**\n\n**HERE :-** ⤵️\n\n`{session_string}`\n\n**BOT BY :- [HILMAY](https://t.me/hilmay619)**'
+                f'**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — PYROGRAM**\n\n**HERE :-** ⤵️\n\n`{session_string}`\n\n**BOT BY :-** @hilmay619'
             )
         )
 
@@ -186,7 +186,7 @@ async def pyroGen(sessionCli, callback_data):
         await sessionCli.send_message(
             chat_id=user_id,
             text=(
-                f'**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — PYROGRAM**\n\n**HERE :-** ⤵️\n\n `{(await botClient.export_session_string())}`\n\n**BOT BY :- [HILMAY](https://t.me/hilmay619)**'
+                f'**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — PYROGRAM**\n\n**HERE :-** ⤵️\n\n `{(await botClient.export_session_string())}`\n\n**BOT BY :-** @hilmay619'
             )
         )
 
