@@ -30,7 +30,7 @@ async def pyroGen(sessionCli, callback_data):
     API_ID = await sessionCli.ask(
         chat_id=user_id,
         text=(
-            '**Send Me Your** `API_ID`'
+            '**SEND ME YOUR API_ID**'
         )
     )
     if not (
@@ -38,7 +38,7 @@ async def pyroGen(sessionCli, callback_data):
     ):
         await sessionCli.send_message(
             chat_id=user_id,
-            text='API_ID should be integer and valid in range limit.'
+            text='**API_ID SHOULD BE INTEGER AND VALID IN RANGE LIMIT**'
         )
         return
     
@@ -46,7 +46,7 @@ async def pyroGen(sessionCli, callback_data):
     API_HASH = await sessionCli.ask(
         chat_id=user_id,
         text=(
-            '**Send Me Your** `API_HASH`'
+            '**SEND ME YOUR API_HASH**'
         )
     )
     
@@ -54,7 +54,7 @@ async def pyroGen(sessionCli, callback_data):
     PHONE = await sessionCli.ask(
         chat_id=user_id,
         text=(
-            '**Send Me Your** `Phone Number` **in International Format. Example : +6285210097400**'
+            '**SEND ME YOUR PHONE_NUMBER** IN INTERNATIONAL FORMAT. EXAMPLE : +6285210097400'
         )
     )    
     if str(PHONE.text).startswith('+'):
@@ -63,7 +63,7 @@ async def pyroGen(sessionCli, callback_data):
         try:
             userClient = await pyroCreateSession(int(API_ID.text), str(API_HASH.text))
         except Exception as e:
-            await API_HASH.reply(f'**Something Went Wrong**:\n`{e}`')
+            await API_HASH.reply(f'**SOMETHING WENT WRONG**:\n`{e}`')
             return
         
         try:
@@ -78,7 +78,7 @@ async def pyroGen(sessionCli, callback_data):
             await sessionCli.send_message(
                 chat_id=user_id,
                 text=(
-                    f"I cannot create session for you.\nBecause you have a floodwait of: `{e.x} seconds`"
+                    f"**I CANNOT CREATE SESSION FOR YOU.\n**BECAUSE YOU HAVE A FLOODWAIT OF :** `{e.x} SECONDS`"
                 )
             )
             return
@@ -95,7 +95,7 @@ async def pyroGen(sessionCli, callback_data):
         ASK_CODE = await sessionCli.ask(
             chat_id=user_id,
             text=(
-                '**Send Me Your Verification Code. Format** `1-2-3-4-5` **Not** `12345`'
+                '**SEND ME YOUR VERIFICATION CODE. FORMAT :** `1-2-3-4-5` **NOT** `12345`'
             )
         )
 
@@ -109,7 +109,7 @@ async def pyroGen(sessionCli, callback_data):
             PASSWARD = await sessionCli.ask(
                 chat_id=user_id,
                 text=(
-                "**The Entered Telegram Number is Protected With Two-Step Verification. Please Enter Your Two-Step Verification Password**"
+                "**THE ENTERED TELEGRAM NUMBER IS PROTECTED WITH TWO-STEP VERIFICATION. PLEASE ENTER YOUR TWO-STEP VERIFICATION PASSWORD**"
                 )
             )
 
@@ -119,7 +119,7 @@ async def pyroGen(sessionCli, callback_data):
                 await sessionCli.send_message(
                     chat_id=user_id,
                     text=(
-                        f'**Something Went Wrong** :\n`{e}`'
+                        f'**SOMETHING WENT WRONG** :\n`{e}`'
                     )
                 )
                 return
@@ -128,7 +128,7 @@ async def pyroGen(sessionCli, callback_data):
             await sessionCli.send_message(
                 chat_id=user_id,
                 text=(
-                    "**The code you sent seems Invalid, Try again.**"
+                    "**THE CODE YOU SENT SEEMS INVALID, TRY AGAIN.**"
                 )
             )
             return
@@ -137,7 +137,7 @@ async def pyroGen(sessionCli, callback_data):
             await sessionCli.send_message(
                 chat_id=user_id,
                 text=(
-                    '**The Code you sent seems Expired. Try again.**'
+                    '**THE CODE YOU SENT SEEMS EXPIRED. TRY AGAIN.**'
                 )
             )
             return
@@ -146,7 +146,7 @@ async def pyroGen(sessionCli, callback_data):
         await sessionCli.send_message(
             chat_id=user_id,
             text=(
-                f'**✅ Your String Session Has Been Successfully Created ✅**\n🌀Type : — Pyrogram 🤖\n\nHere :- ⤵️\n\n`{session_string}`\n\nBot By :- @hilmay619'
+                f'**✅ YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED ✅**\n🌀TYPE : — PYROGRAM 🤖\n\nHERE :- ⤵️\n\n`{session_string}`\n\nBOT BY :- @hilmay619'
             )
         )
 
@@ -164,7 +164,7 @@ async def pyroGen(sessionCli, callback_data):
             await sessionCli.send_message(
                 chat_id=user_id,
                 text=(
-                    f'**Something went wrong**:\n`{e}`'
+                    f'**SOMETHING WENT WRONG**:\n`{e}`'
                 )
             )
             return
@@ -186,7 +186,7 @@ async def pyroGen(sessionCli, callback_data):
         await sessionCli.send_message(
             chat_id=user_id,
             text=(
-                f'**✅ Your String Session Has Been Successfully Created ✅**\n🌀Type : — Pyrogram 🤖\n\nHere :- ⤵️\n\n `{(await botClient.export_session_string())}`\n\nBot By :- @hilmay619'
+                f'**✅ YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED ✅**\n🌀TYPE : — PYROGRAM 🤖\n\nHERE :- ⤵️\n\n `{(await botClient.export_session_string())}`\n\nBOT BY :- @hilmay619'
             )
         )
 

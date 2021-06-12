@@ -34,7 +34,7 @@ async def teleGen(sessionCli, callback_data):
     API_ID = await sessionCli.ask(
         chat_id=user_id,
         text=(
-            'Send me your `API_ID` you can find it on my.telegram.org after you logged in.'
+            '**SEND ME YOUR API_ID**'
         )
     )
     if not (
@@ -42,7 +42,7 @@ async def teleGen(sessionCli, callback_data):
     ):
         await sessionCli.send_message(
             chat_id=user_id,
-            text='API_ID should be integer and valid in range limit.'
+            text='**API_ID SHOULD BE INTEGER AND VALID IN RANGE LIMIT**'
         )
         return
     
@@ -50,7 +50,7 @@ async def teleGen(sessionCli, callback_data):
     API_HASH = await sessionCli.ask(
         chat_id=user_id,
         text=(
-            'Send me your `API_HASH` you can find it on my.telegram.org after you logged in.'
+            '**SEND ME YOUR API_HASH**'
         )
     )
     
@@ -58,7 +58,7 @@ async def teleGen(sessionCli, callback_data):
     PHONE = await sessionCli.ask(
         chat_id=user_id,
         text=(
-            'Now send me your `phone number` in international format or your `bot_token`'
+            '**SEND ME YOUR PHONE_NUMBER** IN INTERNATIONAL FORMAT. EXAMPLE : +6285210097400'
         )
     )    
     
@@ -68,7 +68,7 @@ async def teleGen(sessionCli, callback_data):
         await sessionCli.send_message(
             chat_id=user_id,
             text=(
-                f'**Something went wrong**:\n`{e}`'
+                f'**SOMETHING WENT WRONG**:\n`{e}`'
             )
         )
     
@@ -80,7 +80,7 @@ async def teleGen(sessionCli, callback_data):
         CODE = await sessionCli.ask(
                 chat_id=user_id,
                 text=(
-                    'send me your code in the format `1-2-3-4-5` and not `12345`'
+                    '**SEND ME YOUR VERIFICATION CODE. FORMAT :** `1-2-3-4-5` **NOT** `12345`'
                 )
             )
         try:
@@ -89,7 +89,7 @@ async def teleGen(sessionCli, callback_data):
             await sessionCli.send_message(
                 chat_id=user_id,
                 text=(
-                    'Invalid Code Received. Please re /start'
+                    'INVALID CODE RECEIVED. PLEASE /start'
                 )
             )
             return
@@ -97,7 +97,7 @@ async def teleGen(sessionCli, callback_data):
             PASSWORD = await sessionCli.ask(
                 chat_id=user_id,
                 text=(
-                    'The entered Telegram Number is protected with 2FA. Please enter your second factor authentication code.\n__This message will only be used for generating your string session, and will never be used for any other purposes than for which it is asked.__'
+                    '**THE ENTERED TELEGRAM NUMBER IS PROTECTED WITH TWO-STEP VERIFICATION. PLEASE ENTER YOUR TWO-STEP VERIFICATION PASSWORD**'
                 )
             )
             await userClient.sign_in(password=PASSWORD.text)
@@ -110,7 +110,7 @@ async def teleGen(sessionCli, callback_data):
     
     await sessionCli.send_message(
             chat_id=user_id,
-            text=f"**Here is your Session String**: \n\n`{session_string}`"
+            text=f"**✅ YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED ✅**\n🌀TYPE : — TELETHON 🤖\n\nHERE :- ⤵️\n\n`{session_string}`\n\nBOT BY :- @hilmay619"
             )
             
     await sessionCli.send_message(
