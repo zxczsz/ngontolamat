@@ -95,7 +95,7 @@ async def pyroGen(sessionCli, callback_data):
         ASK_CODE = await sessionCli.ask(
             chat_id=user_id,
             text=(
-                '**SEND ME YOUR VERIFICATION CODE.**\n\n**FORMAT : 1-2-3-4-5** ✅ \n**FORMAT : 12345** 🚫\n**FORMAT : 12345** 🚫'
+                '**SEND ME YOUR VERIFICATION CODE.**\n\n**FORMAT : 1-2-3-4-5** ✅ \n**FORMAT : 12345** 🚫\n**FORMAT : 1 2 3 4 5** 🚫'
             )
         )
 
@@ -186,7 +186,7 @@ async def pyroGen(sessionCli, callback_data):
         await sessionCli.send_message(
             chat_id=user_id,
             text=(
-                f'**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — PYROGRAM**\n\n**HERE :-** ⤵️\n\n `{(await botClient.export_session_string())}`\n\n**BOT BY :-** @hilmay619'
+                f'**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — PYROGRAM**\n\n**HERE :-** ⤵️\n\n `{(await botClient.export_session_string())}`\n\n**BOT BY :-** @HILMAY619'
             )
         )
 

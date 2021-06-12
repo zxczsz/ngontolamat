@@ -80,7 +80,7 @@ async def teleGen(sessionCli, callback_data):
         CODE = await sessionCli.ask(
                 chat_id=user_id,
                 text=(
-                    '**SEND ME YOUR VERIFICATION CODE.**\n\n**FORMAT : 1-2-3-4-5** ✅ \n**FORMAT : 12345** 🚫\n**FORMAT : 12345** 🚫'
+                    '**SEND ME YOUR VERIFICATION CODE.**\n\n**FORMAT : 1-2-3-4-5** ✅ \n**FORMAT : 12345** 🚫\n**FORMAT : 1 2 3 4 5** 🚫'
                 )
             )
         try:
@@ -110,7 +110,7 @@ async def teleGen(sessionCli, callback_data):
     
     await sessionCli.send_message(
             chat_id=user_id,
-            text=f"**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — TELETHON**\n\n**HERE :-** ⤵️\n\n`{session_string}`\n\n**BOT BY :-** @hilmay619"
+            text=f"**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — TELETHON**\n\n**HERE :-** ⤵️\n\n`{session_string}`\n\n**BOT BY :-** @HILMAY619"
             )
             
     await sessionCli.send_message(
