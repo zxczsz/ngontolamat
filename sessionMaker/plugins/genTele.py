@@ -110,7 +110,7 @@ async def teleGen(sessionCli, callback_data):
     
     await sessionCli.send_message(
             chat_id=user_id,
-            text=f"**✅ YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED ✅**\n🌀TYPE : — TELETHON 🤖\n\nHERE :- ⤵️\n\n`{session_string}`\n\nBOT BY :- @hilmay619"
+            text=f"**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — TELETHON**\n\n**HERE :-** ⤵️\n\n`{session_string}`\n\n**BOT BY :- [HILMAY](https://t.me/hilmay619)**"
             )
             
     await sessionCli.send_message(

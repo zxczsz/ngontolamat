@@ -146,7 +146,7 @@ async def pyroGen(sessionCli, callback_data):
         await sessionCli.send_message(
             chat_id=user_id,
             text=(
-                f'**✅ YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED ✅**\n🌀TYPE : — PYROGRAM 🤖\n\nHERE :- ⤵️\n\n`{session_string}`\n\nBOT BY :- @hilmay619'
+                f'**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — PYROGRAM**\n\n**HERE :-** ⤵️\n\n`{session_string}`\n\n**BOT BY :- [HILMAY](https://t.me/hilmay619)**'
             )
         )
 
@@ -186,7 +186,7 @@ async def pyroGen(sessionCli, callback_data):
         await sessionCli.send_message(
             chat_id=user_id,
             text=(
-                f'**✅ YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED ✅**\n🌀TYPE : — PYROGRAM 🤖\n\nHERE :- ⤵️\n\n `{(await botClient.export_session_string())}`\n\nBOT BY :- @hilmay619'
+                f'**YOUR STRING SESSION HAS BEEN SUCCESSFULLY CREATED**\n**TYPE : — PYROGRAM**\n\n**HERE :-** ⤵️\n\n `{(await botClient.export_session_string())}`\n\n**BOT BY :- [HILMAY](https://t.me/hilmay619)**'
             )
         )
 
